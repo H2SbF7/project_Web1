@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Apply Liquid Lipstick | LIPSCO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/boostrap1.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body onload="showbtnLogin()">
+    <header id = "header">
+        <nav class = "navbar navbar-expand-lg py-2">
+            <div class = "container">
+              <ul class = "navbar-nav">
+                <li class = "nav-item">
+                  <a class = "nav-link text-uppercase changeText" style="color:#fff" href = "#header">home</a>
+                </li>
+                
+                <li class="nav-item dropdown px-2">
+                  <a class="nav-link dropdown-toggle text-uppercase changeText" style="color:#fff" data-bs-toggle="dropdown" href="#">collection</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">All Products</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Balm</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Cream</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Gloss</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Tint</a></li>
+                    <li><a class="dropdown-item" href="#">Lipstick</a></li>
+                  </ul>
+                </li>
+                
+                <li class = "nav-item px-2">
+                  <a class="nav-link text-uppercase changeText" style="color:#fff" href="tips-and-tricks.html">Tips And Tricks</a>
+                </li>
+              </ul>
+              
+              <a href="index.html" class="logo changeText">
+                <h1>LIPSCO</h1>
+              </a>
+                <nav id = "nav-btns" class="navbar navbar-expand-lg py-2">
+                    <button id="menu_login" type="button" class="btn btn-login text-uppercase changeText" style="color:#fff; " data-bs-toggle="modal" data-bs-target="#user" id ="btn-modal">login</button>
+                    <div id="menu_logout" class="dropdown px-2" style="display: none;">
+                      <a id="hello_user" class="nav-link dropdown-toggle text-uppercase changeText" style="color:#fff;" data-bs-toggle="dropdown" href="#"></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="" class="dropdown-item"><i class="fa fa-list-alt text-white mr-3 " aria-hidden="true"></i>Quản lý</a></li>
+                        <li><a a href="" class="dropdown-item"><i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i>Đơn của tôi</a></li>
+                        <li><a a href="" class="dropdown-item"><i class="fa fa-key text-white mr-3" aria-hidden="true"></i>Đổi mật khẩu</a></li>
+                        <li><a a href="" class="dropdown-item"> <p onclick="Logout()"><i class="fa fa-sign-out text-white" aria-hidden="true"></i>Đăng xuất</p></a></li>
+                      </ul>
+                    </div>  
+                  <button type = "button" class = "btn position-relative" onclick="SearchOpen()">
+                      <i class = "fa fa-search changeText"></i>
+                  </button>
+                    <button type = "button" class = "btn position-relative">
+                        <i class = "fa fa-shopping-cart changeText" ></i>
+                        <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
+                    </button>
+                    <button type = "button" class = "btn position-relative">
+                        <i class = "fa fa-heart changeText"></i>
+                        <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
+                    </button>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <div id="search">
+      <div class="search-field container position-relative">
+        <input class="search-btn" type="text" placeholder="Search here">
+        <button type="button" class="btn-close-search btn btn-close position-absolute " aria-label="Close" onclick="SearchClose()"></button>
+      </div>
+    </div>
+    <div id="user" class = "modal fade " >
+      <div class="modal-dialog"> 
+        <div class="modal-content"> 
+          <div class="modal-body position-relative">
+                  <div id ="login">
+                    <h1 class="text-center ">Login</h1>
+                    <button type="button" class="btn btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    
+                          <div class="mb-3 mt-4">
+                              <label for="usernameLogin" class="form-label">Username</label>
+                              <input type="text" class="form-control" id="usernameLogin" aria-describedby="emailHelp" >
+                      
+                          </div>
+                          <div class="mb-3">
+                              <label for="passwordLogin" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="passwordLogin">
+                             
+                            </div>
+                            <div id="statusLogin" class = "text-uppercase"></div>
+                          <button class="btn btn-dark my-3 py-2 w-100" onClick="Login()">LOGIN</button>
+                          <p class="text-center mb-4">Not a member?<a href="#" onClick="showSignUp()">Sign up</a></p>
+                </div>
+
+              <div id="signup" class="position-relative ">
+                    <button type="button" class="btn btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="text-center">Sign up</h1>
+                          <div class="mb-3 mt-4">
+                              <label for="fullnameSignUp" class="form-label">Fullname</label>
+                              <input type="text" class="form-control" id="fullnameSignUp" required>
+                          </div>
+                          
+                          <div class="mb-3">
+                              <label for="addressSignUp" class="form-label">Address</label>
+                              <input type="text" class="form-control" id="addressSignUp" required>
+                              
+                          </div>
+                          
+                          <div class="mb-3">
+                            <label for="phoneSignUp" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="phoneSignUp" required>
+                            
+                          </div>
+                          
+                          <div class="mb-3">
+                            <label for="usernameSignUp" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="usernameSignUp" required>
+                            
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="passwordSignUp" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="passwordSignUp" required>
+                          </div>
+                          
+                          <div class="mb-3">
+                            <label for="RepasswordSignUp" class="form-label">Retyping password</label>
+                            <input type="password" class="form-control" id="RepasswordSignUp" required>
+                          </div>  
+
+                          <div id="statusSignUp" class = "text-uppercase"></div>
+                          <button class="btn btn-dark my-3 py-2 w-100" onClick="SignUp()">SIGN UP</button>
+                          <p class="text-center mb-4">Not a member?<a href="#" onClick="showLogin()">Sign up</a></p>
+                  </div>              
+              </div> 
+            </div>   
+            
+          </div>   
+        </div>
+        <header class="masthead" style="background-image:url(images/tips-tricks/post3-heading.jpg) ;">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7" style="background-color: rgba(0, 0, 0, 0.527);">
+                    <h1 class="post-heading text-uppercase" style="text-align: center; font-size: 3.25rem; font-family: Abril Fatface; color: white; position: relative; z-index:10;">
+                        <b>
+                            HOW TO APPLY LIQUID LIPSTICK (YOU MIGHT BE DOING IT WRONG)
+                        </b>
+                    </h1>
+                    <h4 class="meta" style="text-align: center; font-size: 1.25rem; font-style: italic; margin-top: 0; color: #e8ecf0; position: relative; z-index:10;">
+                      Posted by Huynh Man on September 18, 2022
+                    </h4>
+                </div>          
+           </div>
+        </header>
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                       <p>While makeup trends come and go, it seems like matte lipstick is here to stay. With the “new normal” making mask-wearing mandatory, liquid lipsticks and other budge-proof makeup are quickly becoming must-haves for every makeup lover.
+                        To get the best results with your matte lipsticks, here’s a step-by-step guide on how to apply liquid lipstick the right way.
+                        </p>
+                       <h2 class="section-heading">1. Exfoliate for pre-lipstick prep</h2> 
+                       <p>Dry and flaking lips are the bane of any lippie lover, more so when it comes to liquid lipsticks. Rough textures on the lips can get in the way of even application. Products like long-wear lipsticks may even have trouble staying on when applied on cracked lips. So, before applying your matte lipstick, gently exfoliate your lips to create a smooth surface. You can use a lip scrub, washcloth, or old toothbrush to get the job done.
+                        </p>
+                       <h2 class="section-heading">2. Moisturize and blot off the excess</h2>                       
+                       <p>Wearing matte lipstick for long hours can be drying on the lips, which is why applying a moisturizing lip balm is essential.
+                       </p>
+                       <p>Any oil or grease on the lips can also interfere with even the best liquid lipstick, so you want to leave the lip balm on only for a few minutes, and then gently wipe any excess off with a clean tissue. Your lips will feel softer and more hydrated but still dry enough to apply the lipstick on.
+                       </p>
+                       <h2 class="section-heading">3. Line your lips</h2>
+                       <p>Getting a precise lip line using your liquid lipstick applicator takes a lot of practice and patience. A lip liner gives you the crisp outline you need while being more forgiving with errors. Additionally, using a lip liner can prevent some dark liquid lipstick shades from bleeding into the surrounding skin.
+                    </p>
+                       <p>To start lining your lips, draw an “X” where your cupid’s bow is. From the top of “X,” trace each side of the top lip line down to the corners of your mouth. Then, trace from the center of the bottom lip line towards the corner of your mouth. 
+                    </p>
+                       <h2 class="section-heading">4. Blend in the edges of your lip line</h2> 
+                       <p>Once you’ve lined your lips, you now need to blend in the edges of the lip line. This is a good step if your lip line looks a bit rough and you want your lip liner to blend with your liquid lipstick.
+                    </p>
+                       <p>Using a clean cotton bud or lip brush, lightly smudge the outer edges of your lip line. For the inner edge—the edge on the inside of your lips—work inwards to create a more seamless look between your lip liner and the lipstick once you apply the liquid lipstick.
+                    </p>
+                       <h2 class="section-heading">5. Start applying lipstick from the inner part of your lips</h2>
+                       <p>The innermost part of the lips, where your lips purse, is a great place to start the lipstick application for a few reasons. 
+                    </p>
+                       <p>First, it gives you enough space to distribute the liquid lipstick evenly without worrying about going over your lip line. Second, since this area receives a lot of movement and friction when talking, starting here gives the liquid lipstick the chance to dry down first. 
+                        Finally, you can easily tweak your application to build up the color better or create a more precise line when working outwards.
+                        </p>
+                       <h2 class="section-heading">6.Build up the color with light layers</h2> 
+                       <p>One good tip for putting on liquid lipstick correctly is to start with a thin, light layer. This gives you better control over how intense you want the color to be.
+                        Repeat these techniques until you are satisfied with the resulting color.
+                        </p>
+                       <h2 class="section-heading">7. Clean up any mistakes</h2> 
+                       <p>Some people find matte lipsticks daunting because they dry down quickly, giving little leeway for mistakes. Luckily, there are a few ways you can clean up any accidental spots, smears, or clumsy lines.
+                        Here are few pointers to keep in mind:</p>
+                       <p>- If the liquid lipstick is still wet, use a cotton bud with some Maybelline Eye and Lip Makeup Remover. Wipe the mistake with the cotton bud, preferably in the direction of your lips.
+                    </p>
+                       <p>- Liquid lipstick can leave a stain on your face, so working towards the lip lets you minimize how far the stain goes. Retouch your makeup after.
+                    </p>
+                       <p>- If the liquid lipstick has dried, you can use a cotton bud or brush with a concealer like the Maybelline Fit Me Concealer to cover any problem spots and clean up your outer lip line.
+                    </p>
+                       <p>- Lighter-coverage concealers may not be able to hide the mistakes effectively, especially for lipsticks in darker colors.
+                    </p>
+                       <h2 class="section-heading">Apply Liquid Lipstick Like A Pro</h2> 
+                       <p>As a makeup lover, you know first-hand the confidence-boosting power of a perfectly applied liquid lipstick. Even when worn under a mask, lipstick can make you feel empowered. When applied correctly, you can fully enjoy your long-wear lipstick and not worry about smudging.
+                    </p>
+                       <p style="color: rgb(30, 31, 112);"><b>Know someone who needs to up their lip game? Share this article with them on social media!</b> 
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </article>    
+    </section>
+        <footer class="bg-black text-center text-white">
+            <div class="container p-4">
+              <section>
+                <div class="row">
+                    <div class="col" style="text-align:left">
+                        <h5 class="text-uppercase"><b>Help center</b></h5>
+                        <ul class="list-unstyled mb-0">
+                          <li>
+                            <a href="#!" class="text-white">Shop</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Shipping</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Payment</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Privacy</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Terms of Service</a>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="col" style="text-align:left">
+                        <h5 class="text-uppercase"><b>About LIPSCO</b></h5>
+                        <p>A leader in prestige omni-retail, our mission at LIPSCO is to create a welcoming beauty shopping experience for all and inspire fearlessness in our community.</p>
+                        <p>LIPSCO - Where your lips shine</p>
+                    </div>
+                    <div class="col" style="text-align:left">
+                        <h5 class="text-uppercase"><b>Contact Us</b></h5>
+                          <li>
+                            <b>Representative office:</b> 263 An Duong Vuong street, District 5, Ho Chi Minh City
+                          </li>
+                          <li>
+                            <b>Opening hours:</b> 8AM - 8PM PT.
+                          </li>
+                          <li>
+                            <b>Phone number:</b> 0937 794 520
+                          </li>
+                          <li>
+                            <b>Email:</b> lipsco@gmail.com
+                          </li> <br>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-google"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        
+                    </div>
+                    <div class="col" style="text-align:left">
+                        <div class="col" style="text-align:left">
+                            <h5 class="text-uppercase"><b>Subscribe to receive latest updates, special offers, and more.</b></h5>
+                        <form action="">
+                            <div class="field">
+                                <input type="text" id= "email" placeholder="Enter your email address" name="check" onkeyup="checkFilled()">
+                                <label for="email">Email address</label>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-outline-light mb-4">Subscribe</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+              </section>
+            </div>
+          <div class="text-center p-3" style="background-color: black;">© 2022 Copyright: <b>LIPSCO</b>. All Rights Reserved.</div>
+        </footer>
+</body>
+</html>

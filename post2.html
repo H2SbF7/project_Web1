@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022 Horoscope | LIPSCO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/boostrap1.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body onload="showbtnLogin()">
+    <header id = "header">
+        <nav class = "navbar navbar-expand-lg py-2">
+            <div class = "container">
+              <ul class = "navbar-nav">
+                <li class = "nav-item">
+                  <a class = "nav-link text-uppercase changeText" style="color:#fff" href = "#header">home</a>
+                </li>
+                
+                <li class="nav-item dropdown px-2">
+                  <a class="nav-link dropdown-toggle text-uppercase changeText" style="color:#fff" data-bs-toggle="dropdown" href="#">collection</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">All Products</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Balm</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Cream</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Gloss</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Tint</a></li>
+                    <li><a class="dropdown-item" href="#">Lipstick</a></li>
+                  </ul>
+                </li>
+                
+                <li class = "nav-item px-2">
+                  <a class="nav-link text-uppercase changeText" style="color:#fff" href="tips-and-tricks.html">Tips And Tricks</a>
+                </li>
+              </ul>
+              
+              <a href="index.html" class="logo changeText">
+                <h1>LIPSCO</h1>
+              </a>
+                <nav id = "nav-btns" class="navbar navbar-expand-lg py-2">
+                    <button id="menu_login" type="button" class="btn btn-login text-uppercase changeText" style="color:#fff; " data-bs-toggle="modal" data-bs-target="#user" id ="btn-modal">login</button>
+                    <div id="menu_logout" class="dropdown px-2" style="display: none;">
+                      <a id="hello_user" class="nav-link dropdown-toggle text-uppercase changeText" style="color:#fff;" data-bs-toggle="dropdown" href="#"></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="" class="dropdown-item"><i class="fa fa-list-alt text-white mr-3 " aria-hidden="true"></i>Quản lý</a></li>
+                        <li><a a href="" class="dropdown-item"><i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i>Đơn của tôi</a></li>
+                        <li><a a href="" class="dropdown-item"><i class="fa fa-key text-white mr-3" aria-hidden="true"></i>Đổi mật khẩu</a></li>
+                        <li><a a href="" class="dropdown-item"> <p onclick="Logout()"><i class="fa fa-sign-out text-white" aria-hidden="true"></i>Đăng xuất</p></a></li>
+                      </ul>
+                    </div>  
+                  <button type = "button" class = "btn position-relative" onclick="SearchOpen()">
+                      <i class = "fa fa-search changeText"></i>
+                  </button>
+                    <button type = "button" class = "btn position-relative">
+                        <i class = "fa fa-shopping-cart changeText" ></i>
+                        <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
+                    </button>
+                    <button type = "button" class = "btn position-relative">
+                        <i class = "fa fa-heart changeText"></i>
+                        <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
+                    </button>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <div id="search">
+      <div class="search-field container position-relative">
+        <input class="search-btn" type="text" placeholder="Search here">
+        <button type="button" class="btn-close-search btn btn-close position-absolute " aria-label="Close" onclick="SearchClose()"></button>
+      </div>
+    </div>
+    <div id="user" class = "modal fade " >
+      <div class="modal-dialog"> 
+        <div class="modal-content"> 
+          <div class="modal-body position-relative">
+                  <div id ="login">
+                    <h1 class="text-center ">Login</h1>
+                    <button type="button" class="btn btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    
+                          <div class="mb-3 mt-4">
+                              <label for="usernameLogin" class="form-label">Username</label>
+                              <input type="text" class="form-control" id="usernameLogin" aria-describedby="emailHelp" >
+                      
+                          </div>
+                          <div class="mb-3">
+                              <label for="passwordLogin" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="passwordLogin">
+                             
+                            </div>
+                            <div id="statusLogin" class = "text-uppercase"></div>
+                          <button class="btn btn-dark my-3 py-2 w-100" onClick="Login()">LOGIN</button>
+                          <p class="text-center mb-4">Not a member?<a href="#" onClick="showSignUp()">Sign up</a></p>
+                </div>
+
+              <div id="signup" class="position-relative ">
+                    <button type="button" class="btn btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="text-center">Sign up</h1>
+                          <div class="mb-3 mt-4">
+                              <label for="fullnameSignUp" class="form-label">Fullname</label>
+                              <input type="text" class="form-control" id="fullnameSignUp" required>
+                          </div>
+                          
+                          <div class="mb-3">
+                              <label for="addressSignUp" class="form-label">Address</label>
+                              <input type="text" class="form-control" id="addressSignUp" required>
+                              
+                          </div>
+                          
+                          <div class="mb-3">
+                            <label for="phoneSignUp" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="phoneSignUp" required>
+                            
+                          </div>
+                          
+                          <div class="mb-3">
+                            <label for="usernameSignUp" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="usernameSignUp" required>
+                            
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="passwordSignUp" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="passwordSignUp" required>
+                          </div>
+                          
+                          <div class="mb-3">
+                            <label for="RepasswordSignUp" class="form-label">Retyping password</label>
+                            <input type="password" class="form-control" id="RepasswordSignUp" required>
+                          </div>  
+
+                          <div id="statusSignUp" class = "text-uppercase"></div>
+                          <button class="btn btn-dark my-3 py-2 w-100" onClick="SignUp()">SIGN UP</button>
+                          <p class="text-center mb-4">Not a member?<a href="#" onClick="showLogin()">Sign up</a></p>
+                  </div>              
+              </div> 
+            </div>   
+            
+          </div>   
+        </div>
+        <header class="masthead" style="background-image:url(images/tips-tricks/post2-heading.jpg) ;">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7" style="background-color: rgba(0, 0, 0, 0.527);">
+                    <h1 class="post-heading" style="text-align: center; font-size: 3.25rem; font-family: Abril Fatface; color: white; position: relative; z-index:10;">
+                        <b>
+                           2020 HOROSCOPE 
+                        </b>
+                    </h1>
+                    <h4 class="meta" style="text-align: center; font-size: 1.25rem; font-style: italic; margin-top: 0; color: #e8ecf0; position: relative; z-index:10;">
+                      Posted by Cuong Nguyen on September 18, 2022
+                    </h4>
+                </div>          
+           </div>
+        </header>
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Aries</p>
+                      <p>2021 for you, was all about reacquainting with your dreams and your visions. It was about going big and spreading your message. This year, the eclipse of 2022 will highlight your shared resources and investments. Take a look at investments that you have made, as well as your collaborations and partnerships in business and finance. Jupiter, the planet of expansion lands in your area of spirituality and rest. Focus on your healing and taking time to rest and rejuvenate for what was the Battle of 2021. Be kind to yourself, and apply daily self care practices into your work.</p>
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Taurus</p>
+                      <p>2021 for you was all about maintaining stability in your finances, growing wealth, and building your career. 2022 for you will put a focus on relationships. How are your relationships? How are you tending to your relationships? This year is all about redefining what it means to be in relationship with others and more importantly  yourself. Jupiter, the planet of expansion and luck lands in your area of community and  friendships. This year, build your network, socialize, get out there! Be open to new experiences. After all, change is the only thing that is constant, Taurus. Learn to flow and change.</p>
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Gemini</p>
+                      <p>Gemini, 2021 for you was all about new levels of commitments and partnerships, whether personal or business we as well as travel— physically or mentally. 2022 for you is all about building healthy routines. It's about building a schedule, forming healthy habits that ground you in the moment you get caught up in your head and in your ideas. It's time to come back to the earth, and be in the present moment. Because Jupiter, the planet of expansion, and abundance lands in your area of your career, the highest part of your chart, Gemini, opportunities will abound in your work life. You are ready to succeed so set yourself up for success. As you welcome this abundance, make sure to remain grounded and disciplined.</p>
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Cancer</p>
+                      <p>2021 for you was all about focusing on your health, your body. You were able to find routines that work for you and that help you take care of yourself. Now 2022 is all about using this towards building more love and abundance in your life. Open yourself up to what gives you joy, to new relationships, commitments and birthing new ideas and passions. What ideas do you want to share with your community? Jupiter, the planet of expansion and abundance is in your sector of dreams and visions. This is your year to broadcast your message. This is your year to travel and learn a new language, try out a new style, expand your mind. Be curious. Be flexible and learn and accept that you are worthy of receiving this abundance.</p>
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Leo</p>
+                      <p>2021 for you was all about committing to your creativity, and your passion. It was all about fostering joy and love. Now 2022 for you is all about focusing on your home life. Exciting new doorways will open for home and real estate- a move or home upgrade. 2022 is all about creating new spaces in your life for abundance to come in, healing old family scripts, and being in touch with your loved ones. This is your year for career growth and change. And as you expand in your career, be rooted in your foundations, in the people that you can rely on. Jupiter, the planet of luck and expansion shines on your house or the sector of wealth and shared resources. Focus on expanding your financial collaborations, on expanding your investments and most of all, focusing on your own healing work- your internal wealth. Know that to accept abundance, you must break all the barriers within yourself that you have built against it.</p>
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Virgo</p>
+                      <p>2021 for you, was all about finding new ways to create a home wherever in the world you were. You may have moved or had a home upgrade. And for 2022, the spotlight will be on your communication sector- on your business contracts and writing, ideas that you want to pursue. 2022 is about getting your message across and out into the world. This is your time to communicate and share your vision to the world. Jupiter, the planet of expansion and luck, lands in your area of relationships. This will be a theme for the rest of the year inviting you to build relationships both personal and professional. Know that it is in relationship building that you will be able to expand. You simply can't do it alone even if you know you can. Count on your tribe and allow yourself to be supported to get your message across to even a wider audience.</p>
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Libra</p>
+                      <p>2021 for you was all about being able to communicate your message and finding your own authentic voice. Most importantly, it was about communicating your needs and boundaries. It was all about discovering how to use your words as a weapon. And now for 2022, you are ready to build your income streams. You are ready to take this value you have created in 2021 and share with the world. As the eclipse will be in your area of  finances, expect growth in your worth, in your pay. Financial opportunities abound. Jupiter, the planet of luck and expansion, lands on your sector of daily routines and health. In order to be able to build and create wealth, you must be able to streamline your workflow to build healthy systems and habits to set yourself up for success. Find daily practices and rituals that will help ground you and help center you as you build your success and share your value with the world.</p>
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Scorpio</p>
+                      <p>2021 for you was all about income and finances. It was all about the expansion of your value and taking up more space. 2022 for you shines bright on this  identity you have been crafting.. Now is your time to show the world who you are. It is your time to finally be acknowledged for the work that you do. You are in the spotlight Scorpio. Now is the time to trust that you are supported and to accept the abundance that comes to you. Develop the relationships that have sustained you through these challenging past few years. They are your people.  Jupiter, the planet of luck and expansion, lands on your fifth house of romance and love and creativity. As you express yourself in 2022, infuse your creative energy into your work and personal relationships. This will create abundance and prosperity for 2022</p>
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Sagittarius</p>
+                      <p>2021 for you was all about communicating your message, it was all about broadcasting your truth. This 2022 is a time for you to reflect and rest and to accept the healing that comes with slowing down. This is the time to surrender to the unknown by  creating daily habits, routines, and spiritual practices that work for you. This is the time to explore therapy, and its many different forms. How do you give yourself self-care? What can you do to slow down and recharge this 2022? Jupiter, the planet of luck and expansion, highlights your area of family and home. There is a possibility that you are expecting to move or change your home, as well as to expand where you are currently living. What does home mean to you? Where is your home and who is your chosen family? These are the questions that 2022 will ask of you.</p>
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Capricorn</p>
+                      <p>2021 for you was all about deep inner change as you were called to release patterns that no longer serve you. Now for 2022, it's all about building connections, networking, and community.  As you have recuperated and healed yourself in 2021, now is the time to focus on your advocacies. Focus on your vision, and what causes you believe in, your creative ventures, and creative passions. Jupiter, the planet of luck and expansion, lands in your area of communication. You will expand, when you find your voice. When you hone your authenticity, Jupiter invites opportunities, partnerships and collaborations. Jupiter invites you to make commitments that bring  expansion and wealth to your life.</p>
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Aquarius</p>
+                      <p>2021 for you, was all about being in and finding your community. 2022 puts a highlight on your career. As your career expands and new opportunities come to you, Aquarius, remain grounded and rooted in your daily practices, self care, and supportive community. Jupiter, the planet of luck and expansion, sits in your sector of finance and income. Be wary of overspending and make sure to manage your wealth. During this time of expansion, share your wealth to the causes you care for and those in need.</p>
+                      <p class="section-heading" style="font-family: Abril Fatface; font-size: 1.5rem;">Pisces</p>
+                      <p>2021 for you was all about building your career and accepting the opportunities for growth in your area of work. Now 2022 for you invites expansion and travel. Learn a new language, a new skill and open your mind to different possibilities. Opportunities abound for you, Pisces. Jupiter, the planet of luck and expansion lands in your area of self-identity. The spotlight is your, Pisces- to really express who you are, your authenticity, and your radiance.</p>
+                    </div>
+                </div>
+            </div>
+        </article>    
+    </section>
+        <footer class="bg-black text-center text-white">
+            <div class="container p-4">
+              <section>
+                <div class="row">
+                    <div class="col" style="text-align:left">
+                        <h5 class="text-uppercase"><b>Help center</b></h5>
+                        <ul class="list-unstyled mb-0">
+                          <li>
+                            <a href="#!" class="text-white">Shop</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Shipping</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Payment</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Privacy</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Terms of Service</a>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="col" style="text-align:left">
+                        <h5 class="text-uppercase"><b>About LIPSCO</b></h5>
+                        <p>A leader in prestige omni-retail, our mission at LIPSCO is to create a welcoming beauty shopping experience for all and inspire fearlessness in our community.</p>
+                        <p>LIPSCO - Where your lips shine</p>
+                    </div>
+                    <div class="col" style="text-align:left">
+                        <h5 class="text-uppercase"><b>Contact Us</b></h5>
+                          <li>
+                            <b>Representative office:</b> 263 An Duong Vuong street, District 5, Ho Chi Minh City
+                          </li>
+                          <li>
+                            <b>Opening hours:</b> 8AM - 8PM PT.
+                          </li>
+                          <li>
+                            <b>Phone number:</b> 0937 794 520
+                          </li>
+                          <li>
+                            <b>Email:</b> lipsco@gmail.com
+                          </li> <br>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-google"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        
+                    </div>
+                    <div class="col" style="text-align:left">
+                        <div class="col" style="text-align:left">
+                            <h5 class="text-uppercase"><b>Subscribe to receive latest updates, special offers, and more.</b></h5>
+                        <form action="">
+                            <div class="field">
+                                <input type="text" id= "email" placeholder="Enter your email address" name="check" onkeyup="checkFilled()">
+                                <label for="email">Email address</label>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-outline-light mb-4">Subscribe</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+              </section>
+            </div>
+          <div class="text-center p-3" style="background-color: black;">© 2022 Copyright: <b>LIPSCO</b>. All Rights Reserved.</div>
+        </footer>
+</body>
+</html>

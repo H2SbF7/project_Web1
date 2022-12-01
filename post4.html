@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Lip Makeup Hack Makes You Look Like You Got Fillers| LIPSCO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/boostrap1.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body onload="showbtnLogin()">
+    <header id = "header">
+        <nav class = "navbar navbar-expand-lg py-2">
+            <div class = "container">
+              <ul class = "navbar-nav">
+                <li class = "nav-item">
+                  <a class = "nav-link text-uppercase changeText" style="color:#fff" href = "#header">home</a>
+                </li>
+                
+                <li class="nav-item dropdown px-2">
+                  <a class="nav-link dropdown-toggle text-uppercase changeText" style="color:#fff" data-bs-toggle="dropdown" href="#">collection</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">All Products</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Balm</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Cream</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Gloss</a></li>
+                    <li><a class="dropdown-item" href="#">Lip Tint</a></li>
+                    <li><a class="dropdown-item" href="#">Lipstick</a></li>
+                  </ul>
+                </li>
+                
+                <li class = "nav-item px-2">
+                  <a class="nav-link text-uppercase changeText" style="color:#fff" href="tips-and-tricks.html">Tips And Tricks</a>
+                </li>
+              </ul>
+              
+              <a href="index.html" class="logo changeText">
+                <h1>LIPSCO</h1>
+              </a>
+                <nav id = "nav-btns" class="navbar navbar-expand-lg py-2">
+                    <button id="menu_login" type="button" class="btn btn-login text-uppercase changeText" style="color:#fff; " data-bs-toggle="modal" data-bs-target="#user" id ="btn-modal">login</button>
+                    <div id="menu_logout" class="dropdown px-2" style="display: none;">
+                      <a id="hello_user" class="nav-link dropdown-toggle text-uppercase changeText" style="color:#fff;" data-bs-toggle="dropdown" href="#"></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="" class="dropdown-item"><i class="fa fa-list-alt text-white mr-3 " aria-hidden="true"></i>Quản lý</a></li>
+                        <li><a a href="" class="dropdown-item"><i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i>Đơn của tôi</a></li>
+                        <li><a a href="" class="dropdown-item"><i class="fa fa-key text-white mr-3" aria-hidden="true"></i>Đổi mật khẩu</a></li>
+                        <li><a a href="" class="dropdown-item"> <p onclick="Logout()"><i class="fa fa-sign-out text-white" aria-hidden="true"></i>Đăng xuất</p></a></li>
+                      </ul>
+                    </div>  
+                  <button type = "button" class = "btn position-relative" onclick="SearchOpen()">
+                      <i class = "fa fa-search changeText"></i>
+                  </button>
+                    <button type = "button" class = "btn position-relative">
+                        <i class = "fa fa-shopping-cart changeText" ></i>
+                        <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
+                    </button>
+                    <button type = "button" class = "btn position-relative">
+                        <i class = "fa fa-heart changeText"></i>
+                        <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
+                    </button>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <div id="search">
+      <div class="search-field container position-relative">
+        <input class="search-btn" type="text" placeholder="Search here">
+        <button type="button" class="btn-close-search btn btn-close position-absolute " aria-label="Close" onclick="SearchClose()"></button>
+      </div>
+    </div>
+    <div id="user" class = "modal fade " >
+      <div class="modal-dialog"> 
+        <div class="modal-content"> 
+          <div class="modal-body position-relative">
+                  <div id ="login">
+                    <h1 class="text-center ">Login</h1>
+                    <button type="button" class="btn btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    
+                          <div class="mb-3 mt-4">
+                              <label for="usernameLogin" class="form-label">Username</label>
+                              <input type="text" class="form-control" id="usernameLogin" aria-describedby="emailHelp" >
+                      
+                          </div>
+                          <div class="mb-3">
+                              <label for="passwordLogin" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="passwordLogin">
+                             
+                            </div>
+                            <div id="statusLogin" class = "text-uppercase"></div>
+                          <button class="btn btn-dark my-3 py-2 w-100" onClick="Login()">LOGIN</button>
+                          <p class="text-center mb-4">Not a member?<a href="#" onClick="showSignUp()">Sign up</a></p>
+                </div>
+
+              <div id="signup" class="position-relative ">
+                    <button type="button" class="btn btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="text-center">Sign up</h1>
+                          <div class="mb-3 mt-4">
+                              <label for="fullnameSignUp" class="form-label">Fullname</label>
+                              <input type="text" class="form-control" id="fullnameSignUp" required>
+                          </div>
+                          
+                          <div class="mb-3">
+                              <label for="addressSignUp" class="form-label">Address</label>
+                              <input type="text" class="form-control" id="addressSignUp" required>
+                              
+                          </div>
+                          
+                          <div class="mb-3">
+                            <label for="phoneSignUp" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="phoneSignUp" required>
+                            
+                          </div>
+                          
+                          <div class="mb-3">
+                            <label for="usernameSignUp" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="usernameSignUp" required>
+                            
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="passwordSignUp" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="passwordSignUp" required>
+                          </div>
+                          
+                          <div class="mb-3">
+                            <label for="RepasswordSignUp" class="form-label">Retyping password</label>
+                            <input type="password" class="form-control" id="RepasswordSignUp" required>
+                          </div>  
+
+                          <div id="statusSignUp" class = "text-uppercase"></div>
+                          <button class="btn btn-dark my-3 py-2 w-100" onClick="SignUp()">SIGN UP</button>
+                          <p class="text-center mb-4">Not a member?<a href="#" onClick="showLogin()">Sign up</a></p>
+                  </div>              
+              </div> 
+            </div>   
+            
+          </div>   
+        </div>
+        <header class="masthead" style="background-image:url(images/tips-tricks/post4-heading.jpg) ;">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7" style="background-color: rgba(0, 0, 0, 0.527);">
+                    <h1 class="post-heading text-uppercase" style="text-align: center; font-size: 3.25rem; font-family: Abril Fatface; color: white; position: relative; z-index:10;">
+                        <b>
+                            THIS LIP MAKEUP HACK MAKES YOU LOOK LIKE YOU GOT FILLERS 
+                        </b>
+                    </h1>
+                    <h4 class="meta" style="text-align: center; font-size: 1.25rem; font-style: italic; margin-top: 0; color: #e8ecf0; position: relative; z-index:10;">
+                      Posted by Cuong Nguyen on September 18, 2022
+                    </h4>
+                </div>          
+           </div>
+        </header>
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                       <p>Full, pouty lips are all the rage right nowadays, as proven by Ariana Grande, Billie Eilish, and Madison Beer's lipstick looks. No one can blame you if you end up wanting plump and juicy lips, too, after seeing their photos all over social media!
+                      </p>
+                       <h2 class="section-heading">How to Make Your Lips Look Bigger</h2>
+                       <p>Cop the trendy fake fillers look by following this step-by-step guide on how to make your lips look bigger with makeup.
+                      </p>
+                       <p><b> 1. Prep your lips </b></p>
+                       <p>Before applying lipstick, you'll need to prep your lips to make sure that the product stays on all day. Plus, flaky lips look smaller because they reflect less light. Gently exfoliate your lips using a toothbrush to get rid of the flakiness, increase blood circulation, and give your lips a natural rosy color.
+                      </p>
+                       <p><b>2. Prime with concealer</b> </p>
+                       <p>Priming means applying concealer on your lip line to blur them, so you can easily overline without it looking awkward. You'll also need the concealer to create a base layer that will make the color of your lipstick pop.
+                      </p>
+                       <p><b> 3. Overline </b></p>
+                       <p>After all the prepping, it's time to take the first step of your lipstick application: the over-line. Make sure to use a lip liner in a shade that matches the color of your lips perfectly. Maybelline's SuperStay Matte Ink Crayon has a variety of colors to choose from, making it easier to find the best shade for your lips. 
+                      </p>
+                       <p>Then, outline the lips just over your natural lip line. Make sure that it's even and symmetrical so that your lipstick won't look weird or crooked.
+                      </p>
+                      <p><b> 4. Choose the perfect nude</b></p>
+                      <p>Now that you've drawn over your lip line, it's time to apply your lippie. The secret to full, pouty lips is the right nude lip color. Nude shades make your lips look plumper because they create the illusion of volume, while dark shades can make your lips appear flat.
+                      </p>
+                       <h2 class="section-heading">Get Fuller, Poutier Lips Without Fillers</h2>
+                       <p>Thanks to celebrities flooding social media with their full luscious lips, pouty lips have become a favored lip look. But if you have hesitations with lip fillers, lipstick hacks can answer your burning question of how to make your lips look bigger. All it takes is some pampering and a long-lasting nude lipstick that perfectly complements your skin tone.</p>
+                    </div>
+                </div>
+            </div>
+        </article>    
+    </section>
+        <footer class="bg-black text-center text-white">
+            <div class="container p-4">
+              <section>
+                <div class="row">
+                    <div class="col" style="text-align:left">
+                        <h5 class="text-uppercase"><b>Help center</b></h5>
+                        <ul class="list-unstyled mb-0">
+                          <li>
+                            <a href="#!" class="text-white">Shop</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Shipping</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Payment</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Privacy</a>
+                          </li>
+                          <li>
+                            <a href="#!" class="text-white">Terms of Service</a>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="col" style="text-align:left">
+                        <h5 class="text-uppercase"><b>About LIPSCO</b></h5>
+                        <p>A leader in prestige omni-retail, our mission at LIPSCO is to create a welcoming beauty shopping experience for all and inspire fearlessness in our community.</p>
+                        <p>LIPSCO - Where your lips shine</p>
+                    </div>
+                    <div class="col" style="text-align:left">
+                        <h5 class="text-uppercase"><b>Contact Us</b></h5>
+                          <li>
+                            <b>Representative office:</b> 263 An Duong Vuong street, District 5, Ho Chi Minh City
+                          </li>
+                          <li>
+                            <b>Opening hours:</b> 8AM - 8PM PT.
+                          </li>
+                          <li>
+                            <b>Phone number:</b> 0937 794 520
+                          </li>
+                          <li>
+                            <b>Email:</b> lipsco@gmail.com
+                          </li> <br>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-google"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        
+                    </div>
+                    <div class="col" style="text-align:left">
+                        <div class="col" style="text-align:left">
+                            <h5 class="text-uppercase"><b>Subscribe to receive latest updates, special offers, and more.</b></h5>
+                        <form action="">
+                            <div class="field">
+                                <input type="text" id= "email" placeholder="Enter your email address" name="check" onkeyup="checkFilled()">
+                                <label for="email">Email address</label>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-outline-light mb-4">Subscribe</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+              </section>
+            </div>
+          <div class="text-center p-3" style="background-color: black;">© 2022 Copyright: <b>LIPSCO</b>. All Rights Reserved.</div>
+        </footer>
+</body>
+</html>
