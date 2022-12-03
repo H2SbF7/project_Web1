@@ -9,7 +9,7 @@ Size 0.11 oz/ 3.52 g
 Price: $38.00
 About the Product:
  Description: An iconic Dior lip balm with 97 percent natural-origin ingredients that awakens the natural color of lips with a custom glow and up to 24 hours of hydration.
- Highlighted Ingredients: 
+ Details: 
 	 Cherry Oil: Protects against stress factors like drying.
 	 Shea Butter: Provides comfort and nourishment.
 	 Sunflower and Rice Waxes: Maintain shine.
@@ -31,7 +31,7 @@ Size: 1.6 g / 0.05 oz
 Price: $23.00
 About the Product:
  Description: Formulated with a nourishing blend of Hyaluronic Acid, Vitamin E and Jojoba Oil this ultra-comfortable lip balm transforms on contact into a luxurious cushion texture with a clear glossy finish.
-  Higlighted Ingredients:
+  Details:
   	Formulated in Japan with Hyaluronic Acid for an enhanced hydrating experience.
 	Infused with Vitamin E, which is known to ease environmental aggressors.
 	Jojoba Oil to help nourish and lock in moisture while providing a protective layer.
@@ -55,7 +55,7 @@ About the Product:
  Description: 
  	Plumping and moisturizing effect of honeyed blueberry
 	A jam-type lip balm that protects lips from damaging factors and gives plumping and moisturizing effect by forming a honey juice coating on dry and weak lips. Contains fragrance of fresh and sweet edible fruits and honey.
- Higlighted Ingredients: 
+ Details:
  	Honey and Blueberry Extracts: Hydrate your delicate lips effectively for a long time.
 	Vegan Collagen: Helps create a plumped lips instantly.
  Claims: 
@@ -70,7 +70,7 @@ About the Product:
  Description: 
 	 Vibrant volume from the honey-pickled pomegranate
 	 Plumping color lip balm vitalizes your lips with a natural and glossy color while developing full lips with honey juice 
- Higlighted Ingredients: 
+ Details:
  	Pomegranate Extract: Revitalize skin and give lips a natural-looking glow.
 	Peppermint Oil and Ginger Extract: Provide lips with a refreshing finish.
  Claims: 
@@ -87,7 +87,7 @@ Size: 15 ml / 0.5 fl oz
 Price: $12.00
 About the Product:
  Description: A hydrating lip balm packed with antioxidants and natural emollients to nourish dry, chafed skin—in original or other fun flavors.
- Higlighted Ingredients:
+ Details:
  	Castor Seed Oil: A natural plant extract, the thick emollient has unique water-binding properties that keep moisture locked in.
 	Beeswax: A natural emollient which acts as a protective barrier.
 	Lanolin: A natural emollient that’s good for sensitive skin.
@@ -119,7 +119,7 @@ Size: 0.1 oz/ 2.8 g
 Price: $20.00
 About the Product:
  Description: A hydrating, nourishing balm with a buildable, light-to-medium dose of color and a natural dewy finish.
- Higlighted Ingredients:
+ Details:
  	Shea Butter: Helps lock in moisture for smooth, supple lips.
 	A Botanical Blend of lotus, gardenia, and white water lily: Soothes, calms, and nourishes lips.
  Claims: 
